@@ -1,0 +1,12 @@
+image: golang:1.17
+
+pipelines:
+  default:
+    - step:
+        name: Build and Test
+        script:
+          - go test ./...
+
+definitions:
+  caches:
+    go: /go
